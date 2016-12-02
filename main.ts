@@ -46,14 +46,14 @@ function retryStrategy({attempts, delay}){
 }
 
 // subscribe method
-let subscription = load("movies.json")
+click.flatMap(e => load("movies.json"))
 .subscribe(
   renderMovies,
   e => console.log(`error: ${e}`),
   () => console.log("complete")
 );
 
-console.log(subscription);
+// console.log(subscription);
 // subscription.unsubscribe();
 // console.log(subscription);
 
