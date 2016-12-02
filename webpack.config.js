@@ -1,15 +1,15 @@
 module.exports = {
-    entry: "./main",
+    entry: "./main.ts",
     output: {
         filename: "app.js"
+    },
+    resolve: {
+        extenstions: ['', '.ts', '.js']
     },
     module: {
         loaders: [{
             test: /.ts$/,
             loader: "ts-loader"
         }]
-    },
-    resolve: {
-        extenstions: ['', '.ts', '.js']
     }
 };
